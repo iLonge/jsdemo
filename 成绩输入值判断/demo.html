@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<input type="text" name="text" id="text" placeholder="请输入学生成绩" />
+<input type="submit" value="查询等级" id="search"/>
+<script type="text/javascript">
+        var search = document.getElementById("search");
+        search.onclick = function () {
+            var text = document.getElementById("text");
+            var grade = text.value;
+            if (grade.length == 0) {
+                alert("hmp,未输入内容");
+            } else if ((text.value).indexOf(' ') >= 0) {
+                alert("瓜皮,你的输入有空格");
+            } else if (grade >= 0 && grade < 60) {
+                alert("不合格");
+            } else if (grade >= 60 && grade < 70) {
+                alert("合格");
+            } else if (grade >= 70 && grade < 80) {
+                alert("中等");
+            } else if (grade >= 80 && grade < 90) {
+                alert("良好");
+            } else if (grade >= 90 && grade <= 100) {
+                alert("优秀");
+            } else {
+                alert("请输入正确内容");
+            }
+        }
+</script>
+</body>
+</html>

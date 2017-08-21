@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组用splice添加元素</title>
+</head>
+<body>
+<script type="text/javascript">
+//数组用splice添加元素
+    var arr = new Array(6)
+    arr[0] = "George"
+    arr[1] = "John"
+    arr[2] = "Thomas"
+    arr[3] = "James"
+    arr[4] = "Adrew"
+    arr[5] = "Martin"
+
+    document.write(arr + "<br />")
+    arr.splice(2,0,"William")
+    document.write(arr + "<br />")
+
+    //删除从 index 2 ("Thomas") 开始的三个元素，并添加一个新元素 ("William") 来替代被删除的元素：
+var arr1 = new Array(6)
+arr1[0] = "George"
+arr1[1] = "John"
+arr1[2] = "Thomas"
+arr1[3] = "James"
+arr1[4] = "Adrew"
+arr1[5] = "Martin"
+
+document.write(arr1 + "<br />")
+arr1.splice(2,3,"William")
+document.write(arr1);
+</script>
+</body>
+</html>

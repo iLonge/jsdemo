@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组去重（splice删除添加数组元素）</title>
+    <style>
+        .con{
+            width: 400px;
+            height: 300px;
+            margin: 150px auto;
+            border: 3px dashed red;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <br>
+        <br>
+        <br>
+        原数组:[1,2,2,4,4,5,5,7,7];<br>
+        去重后的数组:<b></b>
+    </div>
+    <script>
+        var b=document.getElementsByTagName('b')[0];
+        var arr=[1,2,2,4,4,5,5,7,7];
+        for(var i=0;i<arr.length;i++){
+            for(var j=+1;j<arr.length;j++){
+                if(arr[i]==arr[j]){
+                    //有三个参数
+                    //第一个参数为要删除/添加的元素位置，必须为整数
+                    //第二个为删除的数量，如果为0，则不删除
+                    //第三个参数可选，向数组添加新元素
+                    arr.splice(j,1); //splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。该方法会改变原始数组。
+                }
+            }
+            b.innerHTML=arr;
+        }
+    </script>
+</body>
+</html>

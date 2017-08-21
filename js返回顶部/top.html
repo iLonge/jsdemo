@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js返回顶部</title>
+    <script src="js/top.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .con{
+            height: 2000px;
+            width: 98%;
+            margin: 0 auto;
+            border: 3px solid red;
+            position: relative;
+        }
+        #topDiv{
+            width: 60px;
+            height: 60px;
+            background: rgba(128, 128, 128, 0.76);
+            opacity: 0.7;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 60px;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            line-height:60px;
+            border-radius: 5px;
+        }
+        #topDiv:hover{
+            background: rgba(128, 128, 128, 0.96);
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <h1>回到顶部按钮往下翻</h1>
+        <div id="topDiv">
+            ↑
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>确定选择的单选</title>
+    <link rel="stylesheet" href="css/check.css">
+    <script>
+        window.onload=function () {
+            //先获取dom节点
+            var radio=document.getElementsByClassName('radio') //arr
+            var btn=document.getElementById('btn');
+            var result=document.getElementById('result');
+            //封装 清除所有样式的函数
+            function remove() {
+                for(var i=0;i<radio.length;i++){
+                    if(radio[i].checked){
+                        //开始用的是radio[i].checked=false不行
+                      radio[i].checked=!radio[i].checked;
+//                    radio[i].checked=''  //成功
+                    }
+                }
+            }
+            //用闭包
+            for(var i=0;i<radio.length;i++){
+                (function (arg) {
+                    radio[arg].onclick=function () {
+                        remove();
+                        radio[arg].checked="true";  //写什么无所谓，有值就行
+                        //这个函数必须写在里面，外面读不到arg
+                        btn.onclick=function () {
+                            result.innerHTML=arg+1;
+                        }
+                    }
+                })(i)
+            }
+        }
+    </script>
+</head>
+<body>
+<!--容器-->
+    <div class="con">
+        <ul>
+            <li><input type="radio" checked class="radio"></li>
+            <li><input type="radio" class="radio"></li>
+            <li><input type="radio"class="radio"></li>
+            <li><input type="radio"class="radio"></li>
+            <li><input type="radio"class="radio"></li>
+        </ul>
+        <button id="btn">确定</button>
+        <b>你选择的是第<span id="result">1</span>个单选</b>
+        <p>2017/8/17下午</p>
+    </div>
+</body>
+</html>

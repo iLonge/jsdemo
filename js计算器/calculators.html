@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js计算器</title>
+    <link rel="stylesheet" href="css/calculators.css">
+</head>
+<body>
+<!--大盒子-->
+    <div class="container">
+        <p>js简易计算器</p>
+        <hr color="#666">
+        <!--输入区域-->
+        <div class="content">
+            <!--显示屏-->
+            <div id="screen" class="screen" >
+
+            </div>
+            <!--按键区域-->
+            <div class="keyboards" id="keyboards">
+                <!--4x4-->
+                <table border="1">
+                    <tr>
+                        <td onclick="calculater(7)">7</td>
+                        <td onclick="calculater(8)">8</td>
+                        <td onclick="calculater(9)">9</td>
+                        <td id="plus">+</td>
+                    </tr>
+                    <tr>
+                        <td onclick="calculater(4)">4</td>
+                        <td onclick="calculater(5)">5</td>
+                        <td onclick="calculater(6)">6</td>
+                        <td id="sub">-</td>
+                    </tr>
+                    <tr>
+                        <td onclick="calculater(1)">1</td>
+                        <td onclick="calculater(2)">2</td>
+                        <td onclick="calculater(3)">3</td>
+                        <td id="mult">*</td>
+                    </tr>
+                    <tr>
+                        <td id="clear">C</td>
+                        <td onclick="calculater(0)">0</td>
+                        <td id="equal">=</td>
+                        <td id="divi">/</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <p>@庞晓峰 2017/8/18下午</p>
+    </div>
+<script src="js/calculators.js"></script>
+</body>
+</html>

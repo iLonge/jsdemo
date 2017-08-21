@@ -1,0 +1,45 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.container{
+  width: 300px;
+  height: 270px;
+  margin: 150px auto;
+  border: 3px solid red;
+  ul{
+    li{
+      list-style: none;
+      margin-bottom: 6px;
+      .box{
+        width: 20px;
+        height: 20px;
+        background: rgba(128, 128, 128, 0.41);
+        display: inline-block;
+        line-height: 20px;
+        text-align: center;
+        cursor: pointer;
+        &:hover{
+          background: rgba(128, 128, 128, 0.65);
+        }
+      }
+      input[type=text]{
+        width: 50px;
+        height: 20px;
+        position: relative;
+        top:-3px;
+        left: 5px;
+        display: inline-block;
+      }
+    }
+  }
+  p:first-child{
+    color: #803d70;
+    margin-bottom: 20px;
+  }
+  p:last-child{
+    color: grey;
+    font-size: 14px;
+    text-align: right;
+  }
+}
